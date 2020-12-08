@@ -1,13 +1,8 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- Link to schema: https://app.quickdatabasediagrams.com/#/d/v57lsY
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
-
-CREATE TABLE "Date" (
+﻿CREATE TABLE "Date" (
     "date_id"  SERIAL  NOT NULL,
-    "year" INT(4)   NOT NULL,
-    "month" INT(2)   NOT NULL,
-    "quarter" INT(1)   NOT NULL,
+    "year" INT   NOT NULL,
+    "month" INT   NOT NULL,
+    "quarter" INT   NOT NULL,
     "season" VARCHAR   NOT NULL,
     CONSTRAINT "pk_Date" PRIMARY KEY (
         "date_id"
