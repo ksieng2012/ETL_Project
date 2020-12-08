@@ -1,5 +1,5 @@
 # ETL_Project
-ETL_Project Report
+ETL_Project Report by Kosal Sieng, Sean Istre, and Carter Alvarez
 
 For our ETL project we took data from the EIA website to look at electricity data. We gathered three data sets to get good variation for our final database. Our three data sets were the supply, demand, and a pricing information about electricity usage in the United States across 3 sectors: residential, commercial, and industrial. The demand and pricing data sets were both csv files, and the supply file was a json. All three of our data sets were all set during the same 20 year time frame, with new data points coming each month. Due to this, we decided to create a final sequel-alchemy data base that shared the same primary key for date_id, so that we could run queries to find electricity data quickly from the different quarters, seasons, months etc across all of our data. 
 
