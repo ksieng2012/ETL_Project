@@ -5,7 +5,7 @@ For our ETL project we took data from the EIA website to look at electricity dat
 
 
 Part 1. 
-First, we took the demand and price data sets and started to import them into our jupyter notebook so we could clean them using python/pandas. The price and demand data sets were similar in how they were built, so we created code that cleaned up both of them seamlessly. We deleted the columns and rows that we did not need, filtered the data set so that it was in descending order to match our external date_id excel sheet, and then renamed our index column as date_id for the final connection in sequal. Once the data frames were cleaned up, we started to create our code to export these data frames into our sequel data base.  
+First, we took the demand and price data sets and started to import them into our jupyter notebook so we could clean them using python/pandas. We did this by reading the csv files we downloaded into the notebook using pandas. The price and demand data sets were similar in how they were built, so we created code that cleaned up both of them seamlessly. We deleted the columns and rows that we did not need, as there was about 6 rows of heading that was useless for the data base, and 3 rows of extra columns that restated identifications. We then ran a line of code that filtered the data set so that it was in descending order based on date, to match our external date_id excel sheet, and then renamed our index column as date_id for the final connection in sequal. Once the data frames were cleaned up, we started to create our code to export these data frames into our sequel data base.  
 
 
 Part 2. KOSAL SECTION HERE
