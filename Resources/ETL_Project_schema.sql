@@ -14,27 +14,27 @@ CREATE TABLE "Date" (
      )
 );
 
-CREATE TABLE "Demand" (
+CREATE TABLE "Demand_MillionKWH" (
     "date_id" INT   NOT NULL,
     "residential_demand" FLOAT   NOT NULL,
     "commercial_demand" FLOAT   NOT NULL,
     "industrial_demand" FLOAT   NOT NULL,
-    CONSTRAINT "pk_Demand" PRIMARY KEY (
+    CONSTRAINT "pk_Demand_MillionKWH" PRIMARY KEY (
         "date_id"
      )
 );
 
-CREATE TABLE "Price" (
+CREATE TABLE "Price_CentsPerKWH" (
     "date_id" INT   NOT NULL,
     "residential_price" FLOAT   NOT NULL,
     "commercial_price" FLOAT   NOT NULL,
     "industrial_price" FLOAT   NOT NULL,
-    CONSTRAINT "pk_Price" PRIMARY KEY (
+    CONSTRAINT "pk_Price_CentsPerKWH" PRIMARY KEY (
         "date_id"
      )
 );
 
-CREATE TABLE "Supply" (
+CREATE TABLE "Supply_ThousandMWH" (
     "date_id" INT   NOT NULL,
     "natural_gas" FLOAT   NOT NULL,
     "nuclear" FLOAT   NOT NULL,
@@ -44,17 +44,17 @@ CREATE TABLE "Supply" (
     "wood" FLOAT   NOT NULL,
     "other_biomass" FLOAT   NOT NULL,
     "other" FLOAT   NOT NULL,
-    CONSTRAINT "pk_Supply" PRIMARY KEY (
+    CONSTRAINT "pk_Supply_ThousandMWH" PRIMARY KEY (
         "date_id"
      )
 );
 
-ALTER TABLE "Demand" ADD CONSTRAINT "fk_Demand_date_id" FOREIGN KEY("date_id")
+ALTER TABLE "Demand_MillionKWH" ADD CONSTRAINT "fk_Demand_MillionKWH_date_id" FOREIGN KEY("date_id")
 REFERENCES "Date" ("date_id");
 
-ALTER TABLE "Price" ADD CONSTRAINT "fk_Price_date_id" FOREIGN KEY("date_id")
+ALTER TABLE "Price_CentsPerKWH" ADD CONSTRAINT "fk_Price_CentsPerKWH_date_id" FOREIGN KEY("date_id")
 REFERENCES "Date" ("date_id");
 
-ALTER TABLE "Supply" ADD CONSTRAINT "fk_Supply_date_id" FOREIGN KEY("date_id")
+ALTER TABLE "Supply_ThousandMWH" ADD CONSTRAINT "fk_Supply_ThousandMWH_date_id" FOREIGN KEY("date_id")
 REFERENCES "Date" ("date_id");
 
